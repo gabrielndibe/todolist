@@ -8,6 +8,15 @@ function addTask () {
         alert('Please enter a task');
         return;
     }
+
+    const taskTextLower = taskText.toLowerCase();
+    if (tasks.some(tasks => tasks.toLowerCase() === taskTextLower)) {
+        alert('This task already exists!');
+        taskInput.value = ''; 
+        return;
+    }
+
+
     tasks.push(taskText);
     const li = document.createElement('li');
    li.className = 'task-item';
@@ -17,7 +26,7 @@ function addTask () {
     li.appendChild(span);
     
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = 'Delete';
+    deleteBtn.textContent = 'X';
     li.appendChild(deleteBtn);
     taskList.appendChild(li);
     taskInput.value = '';
@@ -35,3 +44,5 @@ function addTask () {
             addTask();
         }
     });
+
+        
