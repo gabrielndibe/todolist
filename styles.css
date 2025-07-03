@@ -55,12 +55,18 @@ h1 {
 }
 
 #task-list {
-  list-style: none;
   padding: 0;
-}
+  }
 .task-item button {
-  background-color: black;
+  background-color: #dc3545;
   color: white;
   border: none;
   border-radius: 5px;
+  margin-right: 4px;
+  
 }
+.task-item {
+  border-bottom: 1px solid #eee;
+}
+
+ 
