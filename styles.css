@@ -66,10 +66,28 @@ h1 {
   
 }
 .task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   border-bottom: 1px solid #eee;
+  gap: 20px;
 }
 
- 
-  
-  
+.task-item span {
+  flex: 1; 
+  text-align: left; 
+}
 
+.task-item button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#error {
+  color: #dc3545;
+}
